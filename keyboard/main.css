@@ -1,0 +1,124 @@
+:root{
+    font-size: 10px;
+}
+.text-container{
+    display: flex;
+    justify-content: center;
+}
+textarea{
+    border-radius: 2.5rem;
+    padding: 2.5rem;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    min-height: 30rem;
+    max-height: 50rem;
+    font-size: 2rem;
+}
+.keyboard {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 1.5rem 0;
+    background: #28352a;
+    box-shadow: 0 0 5rem rgba(0, 0, 0, 0.5);
+    user-select: none;
+    transition: bottom 0.4s;
+}
+.use-keyboard-input, .use-keyboard-input:focus{
+    border: 0.1rem solid black;
+    outline: -webkit-focus-ring-color auto 0px;
+}
+.keyboard--hidden {
+    bottom: -100%;
+}
+
+.keyboard__keys {
+    text-align: center;
+}
+
+.keyboard__key {
+    height: 4.5rem;
+    width: 6%;
+    max-width: 9rem;
+    margin: 0.3rem;
+    border-radius: 0.4rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-size: 2rem;
+    outline: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: top;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+}
+
+.keyboard__key:active {
+    background: rgba(255, 255, 255, 0.12);
+}
+.active-key{
+    box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
+}
+
+.keyboard__key--wide {
+    width: 12%;
+}
+
+.keyboard__key--extra-wide {
+    width: 36%;
+    max-width: 50rem;
+}
+
+.keyboard__key--activatable::after {
+    content: '';
+    top: 1rem;
+    right: 1rem;
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+}
+
+.keyboard__key--active::after {
+    background: #08ff00;
+}
+.keyboard__key--activatables::after {
+    content: '';
+    top: 1rem;
+    right: 1rem;
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+}
+
+.keyboard__key--actives::after {
+    background: #08ff00;
+}
+
+.keyboard__key--dark {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+
+
+.keyboard__key--actives::after {
+    background: #08ff00;
+}
+@media (max-width: 820px){
+    :root{
+        font-size: 8px;
+    }
+    .keyboard__key{
+        max-width: 6rem;
+    }
+}
