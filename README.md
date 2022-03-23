@@ -1,4 +1,4 @@
 # virtual-keyboard
 
 
-[**Deploy virtual-keyboardr**](https://tsakunova.github.io/virtual-keyboard/)
+[**Deploy virtual-keyboard**](https://tsakunova.github.io/virtual-keyboard/)
